@@ -57,7 +57,7 @@ import net.agilhard.vfsjfilechooser2.utils.VFSResources;
 @SuppressWarnings("serial")
 public final class DefaultAccessoriesPanel extends JComponent
 {
-    private static final String RES_PATH = "/com/googlecode/vfsjfilechooser2/plaf/icons/";
+    private static final String RES_PATH = "/net/agilhard/vfsjfilechooser2/plaf/icons/";
     private JButton bookmarksButton;
     private JButton localFSButton;
     private JButton connectionsButton;

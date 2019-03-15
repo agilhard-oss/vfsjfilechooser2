@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
  */
 public final class VFSResources
 {
-    private static final String BUNDLE_BASENAME = "com.googlecode.vfsjfilechooser2.i18n.resources";
+    private static final String BUNDLE_BASENAME = "net.agilhard.vfsjfilechooser2.i18n.resources";
     private static ResourceBundle resourceBundle;
     private static final Logger LOG = LoggerFactory.getLogger(VFSResources.class.getName());
 
