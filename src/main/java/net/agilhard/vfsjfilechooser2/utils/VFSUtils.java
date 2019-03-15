@@ -119,7 +119,7 @@ public final class VFSUtils
                     StandardFileSystemManager fm = new StandardFileSystemManager();
                     // [skn 2016-07-22] Setting the classloader explicitly fixes an issue with vfs configuration not
                     //                  loaded when this is used in code launched by the toolbox-console.
-                    fm.setClassLoader(VFSUtils.class.getClassLoader());
+                    //fm.setClassLoader(VFSUtils.class.getClassLoader());
                     fm.setCacheStrategy(CacheStrategy.MANUAL);
                     fm.init();
                     fm.addProvider("sftp", new net.agilhard.vfs2.provider.sftp.SftpFileProvider());
