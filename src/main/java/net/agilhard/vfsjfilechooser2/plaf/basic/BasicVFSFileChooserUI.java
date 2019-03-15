@@ -306,7 +306,7 @@ public class BasicVFSFileChooserUI extends AbstractVFSFileChooserUI {
 	// Hardcoded path until we get the possibility to have themes
 	// or to use the default laf icons
 	private Icon lookupIcon(final String path) {
-		return new ImageIcon(this.getClass().getResource("/com/googlecode/vfsjfilechooser2/plaf/icons/" + path));
+		return new ImageIcon(this.getClass().getResource("/net/agilhard/vfsjfilechooser2/plaf/icons/" + path));
 	}
 
 	protected void installStrings(final VFSJFileChooser fc) {
