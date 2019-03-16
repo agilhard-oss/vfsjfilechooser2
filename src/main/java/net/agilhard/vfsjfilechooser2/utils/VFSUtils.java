@@ -37,6 +37,7 @@ import org.apache.commons.vfs2.FileSystemOptions;
 import org.apache.commons.vfs2.FileType;
 import org.apache.commons.vfs2.impl.StandardFileSystemManager;
 import net.agilhard.vfs2.provider.sftp.SftpFileSystemConfigBuilder;
+import net.agilhard.vfsutil.VFSTools;
 
 /**
  * A helper class to deal with commons-vfs file abstractions
@@ -116,14 +117,7 @@ public final class VFSUtils
             {
                 try
                 {
-                    StandardFileSystemManager fm = new StandardFileSystemManager();
-                    // [skn 2016-07-22] Setting the classloader explicitly fixes an issue with vfs configuration not
-                    //                  loaded when this is used in code launched by the toolbox-console.
-                    //fm.setClassLoader(VFSUtils.class.getClassLoader());
-                    fm.setCacheStrategy(CacheStrategy.MANUAL);
-                    fm.init();
-                    fm.addProvider("sftp", new net.agilhard.vfs2.provider.sftp.SftpFileProvider());
-                    fileSystemManager = fm;
+                    fileSystemManager = VFSTools.getInstance().getFileSystemManager();
                 }
                 catch (Exception exc)
                 {
